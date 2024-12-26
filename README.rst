@@ -1,4 +1,6 @@
-This is a fork of of the LISA system by David E. Young (from https://lisa.sourceforge.net/).
+This is a *fork* of the LISA system by David E. Young from https://lisa.sourceforge.net/.
+
+Some comments at the end of this README ..
 
 The LISA Reference Guide
 ------------------------
@@ -1288,3 +1290,53 @@ implementations:
 -  Xanalys LispWorks, versions 4.1.20 and 4.2, Linux and Windows 2000.
 -  CLISP, version 2.27 and newer, Linux and Windows 2000.
 -  CMUCL, version 18c, Linux.
+
+
+___
+
+Tested with SBCL 2.2.9.debian with the folder ``lisa`` copied
+into ``~/quicklisp/local-projects``. Unfortunately there is a *package-lock*
+that inhibits smooth loading. That is why the package ``cl-package-locks`` is helpful ::
+
+
+    (ql::quickload :cl-package-locks)
+    (cl-package-locks::unlock-package :common-lisp)
+    (ql::quickload :lisa)  ;;; unlock 2
+    (cl-package-locks::lock-package :common-lisp)
+
+    ;;; (cl-package-locks::all-locked-packages)
+    ;;; (cl-package-locks::all-unlocked-packages)
+
+
+    (in-package "LISA-USER")
+
+    (deftemplate expr () (slot str))
+
+    (defrule r1 () (expr (str ?s)) => (print ?S))
+
+    (assert (expr (str "A + B + 2 * C - D")))
+    (assert (expr (str '("A + B + 2 * C - D" "X + Y" "2 * Z + X"))))
+
+    (facts)
+    (agenda)
+    (run)
+
+    --> should yield:
+
+    #<EXPR ; id 0 {100443A323}>
+    #<EXPR ; id 1 {10017A10E3}>
+    For a total of 2 facts.
+    #<ACTIVATION (INITIAL-CONTEXT.R1 (F-0) ; salience = 0) {1001740173}>
+    #<ACTIVATION (INITIAL-CONTEXT.R1 (F-0) ; salience = 0) {1001740173}>
+    For a total of 2 activations.
+
+    "A + B + 2 * C - D" 
+    ("A + B + 2 * C - D" "X + Y" "2 * Z + X") 
+    * 
+
+
+This README was converted by using ``pandoc`` applied to ``ref-guide.html`` (in the doc folder).
+
+___
+
+
