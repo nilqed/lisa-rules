@@ -1,0 +1,25 @@
+/activation.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/belief-interface.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/conditions.lisp/1.3/Fri Sep  7 21:32:05 2007//
+/deffacts.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/environment.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/epilogue.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/fact-parser.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/fact.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/language.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/pattern.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/preamble.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/retrieve.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/strategies.lisp/1.1/Fri Apr 14 16:44:37 2006//
+/tms-support.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/watches.lisp/1.2/Fri Sep  7 21:32:05 2007//
+/meta.lisp/1.3/Sat Sep  8 14:48:58 2007//
+/binding.lisp/1.3/Tue Sep 11 21:14:09 2007//
+/conflict-resolution-strategies.lisp/1.3/Tue Sep 11 21:14:09 2007//
+/context.lisp/1.3/Tue Sep 11 21:14:09 2007//
+/rete.lisp/1.3/Tue Sep 11 21:14:09 2007//
+/rule.lisp/1.3/Tue Sep 11 21:14:09 2007//
+/token.lisp/1.3/Tue Sep 11 21:14:09 2007//
+/heap.lisp/1.4/Mon Sep 17 22:42:39 2007//
+/rule-parser.lisp/1.5/Mon Sep 17 22:42:39 2007//
+D
